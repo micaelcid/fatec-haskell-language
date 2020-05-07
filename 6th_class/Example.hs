@@ -74,3 +74,31 @@ sumNumbers x y z = x + y + z
 
 -- *Example> map (3 *) [1, 2, 3, 4, 5]
 -- [3,6,9,12,15]
+
+-- *Example> map length ["Micael", "Calel"]
+-- [6,5]
+
+-- Filter
+-- filter :: (a -> Bool) -> [a] -> [a]
+
+-- *Example> filter even [1, 2, 3, 4, 5, 6]
+-- [2,4,6]
+
+-- *Example> filter (>3) [1, 2, 3, 4, 5, 6]
+-- [4,5,6]
+
+-- *Example> filter (\x -> x == reverse x) ["ANA", "PHP", "HASKELL", "JAVA"]
+-- ["ANA","PHP"]
+
+-- Foldl
+-- foldl :: Foldable t => (b -> a -> b) -> b -> t a -> b
+-- foldl :: (b -> a -> b) -> b -> [a] -> b
+
+-- *Example> foldl (+) 0 [1, 2, 3]
+-- 6
+
+-- *Example> foldl (*) 1 [1, 2, 3, 4, 5]
+-- 120
+
+-- foldl (\initial list -> initial + length list) 0 ["HASKELL", "PHP", "JAVA"]
+-- 14
