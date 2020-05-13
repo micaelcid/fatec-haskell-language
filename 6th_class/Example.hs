@@ -29,11 +29,11 @@ otherFactorial :: Int -> Int
 otherFactorial 0 = 1
 otherFactorial x = x * otherFactorial(x-1)
 
-removeVowel :: String -> String
-removeVowel [] = []
-removeVowel (x:xs)
-  | elem x "AEIOUaeiou" = removeVowel xs
-  | otherwise = x : removeVowel xs
+removeVowels :: String -> String
+removeVowels [] = []
+removeVowels (x:xs)
+  | elem x "AEIOUaeiou" = removeVowels xs
+  | otherwise = x : removeVowels xs
 
 -- 6th class
 

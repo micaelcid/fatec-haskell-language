@@ -32,11 +32,11 @@ module Example where
   -- "FATEC" to (x:y:z:w:u:us)? Yes
   -- x = 'F', y = 'A', z = 'T', w = 'E', u = 'C', us = []
 
-  removeVowel :: String -> String
-  removeVowel [] = []
-  removeVowel (x:xs)
-    | x `elem` "AEIOUaeiou" = removeVowel xs -- If x is one of the elements in the list 'AEIOUaeiou', return the function with the rest
-    | otherwise = x : removeVowel xs -- Otherwise, return the function with x concatenated with xs (do nothing)
+  removeVowels :: String -> String
+  removeVowels [] = []
+  removeVowels (x:xs)
+    | x `elem` "AEIOUaeiou" = removeVowels xs -- If x is one of the elements in the list 'AEIOUaeiou', return the function with the rest
+    | otherwise = x : removeVowels xs -- Otherwise, return the function with x concatenated with xs (do nothing)
 
   removeConsonant :: String -> String
   removeConsonant [] = []
